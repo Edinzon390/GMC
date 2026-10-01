@@ -34,15 +34,34 @@
       letter-spacing: .13em;
       text-transform: uppercase;
     }
-    .eyebrow::before { width: 22px; height: 2px; background: currentColor; content: ""; }
-    .section-heading { max-width: 650px; margin: 0 auto 42px; text-align: center; }
+    .eyebrow::before,
+    .eyebrow::after {
+      width: 22px;
+      height: 2px;
+      background: currentColor;
+      content: "";
+      display: block;
+    }
+    .section-heading {
+      max-width: 980px;
+      margin: 0 0 42px;
+      text-align: left;
+    }
     .section-heading h2 {
-      margin: 13px 0 12px;
+      margin: 13px 0 18px;
       font-size: clamp(2rem, 4vw, 3rem);
       letter-spacing: -.045em;
       line-height: 1.12;
+      color: var(--ink);
     }
-    .section-heading p { margin: 0; color: var(--muted); }
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.8;
+      max-width: 980px;
+    }
+    .section-heading p + p { margin-top: 18px; }
 
     .topbar { background: var(--blue-dark); color: white; font-size: .83rem; }
     .topbar-inner { display: flex; justify-content: space-between; gap: 16px; padding-block: 9px; }
@@ -59,16 +78,13 @@
     }
     .nav { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 28px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
-    .brand-mark {
-      display: grid;
-      width: 42px;
-      height: 42px;
-      place-items: center;
-      border-radius: 13px;
-      background: var(--blue);
-      color: white;
+    .brand-logo {
+      display: block;
+      width: clamp(260px, 30vw, 360px);
+      height: auto;
+      max-height: 82px;
+      object-fit: contain;
     }
-    .brand-mark svg { width: 25px; height: 25px; }
     .brand-name { display: block; color: var(--ink); font-size: 1.03rem; font-weight: 850; letter-spacing: -.035em; line-height: 1.2; }
     .brand-caption { display: block; margin-top: 3px; color: var(--muted); font-size: .67rem; letter-spacing: .08em; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; gap: 30px; }
@@ -186,12 +202,20 @@
     }
     .hero-badge svg { width: 22px; height: 22px; color: var(--blue); }
 
-    .about { padding: 96px 0; background: var(--surface); }
-    .identity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .identity-card { padding: 28px; border: 1px solid var(--border); border-radius: var(--radius); background: white; }
+    .about { padding: 96px 0; background: linear-gradient(180deg, #f4f8fd 0%, #ffffff 100%); }
+    .identity-section { display: grid; gap: 26px; }
+    .identity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .identity-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 12px 30px rgba(17, 29, 43, 0.04);
+    }
     .identity-label { color: var(--blue); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-    .identity-card h3 { margin: 9px 0; font-size: 1.4rem; letter-spacing: -.035em; }
-    .identity-card p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .identity-card h3 { margin: 9px 0; font-size: 1.4rem; letter-spacing: -.035em; color: var(--ink); }
+    .identity-card p { margin: 0; color: var(--muted); font-size: .94rem; line-height: 1.7; }
+    .identity-card p + p { margin-top: 12px; }
 
     .service-detail { padding: 76px 0 92px; background: linear-gradient(115deg, #f5f8fc 0%, #fff 72%); }
     .service-detail-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 58px; }
