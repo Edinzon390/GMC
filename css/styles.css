@@ -164,26 +164,79 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      border: 2px dashed #b8c9dc;
+      border: 1px solid rgba(22, 71, 131, .08);
       border-radius: 27px;
-      background: linear-gradient(145deg, #eef4fb, #f8fafc);
+      background-color: #ebf3fb;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       color: #6a7d92;
       text-align: center;
+      box-shadow: 0 18px 42px rgba(17, 29, 43, 0.08);
     }
     .image-placeholder::before, .image-placeholder::after {
       position: absolute;
       width: 230px;
       height: 230px;
-      border: 1px solid rgba(22, 71, 131, .08);
+      border: 1px solid rgba(255, 255, 255, .18);
       border-radius: 50%;
       content: "";
     }
     .image-placeholder::after { width: 310px; height: 310px; }
-    .placeholder-content { z-index: 1; padding: 24px; }
+    .placeholder-content { z-index: 1; padding: 24px; opacity: 0; visibility: hidden; pointer-events: none; }
     .placeholder-content svg { width: 50px; height: 50px; color: var(--blue); }
     .placeholder-content strong { display: block; margin-top: 13px; color: #40536a; font-size: .95rem; }
     .placeholder-content span { display: block; margin-top: 4px; font-size: .79rem; }
-    .hero-image { min-height: 440px; }
+    .hero-image {
+      min-height: 440px;
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.35), rgba(18, 60, 114, 0.12)), url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-photo {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.35), rgba(18, 60, 114, 0.18)), url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-ultrasonido {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-sonografia {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-emergencia {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.28), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-rayos-x {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1516069677018-378515003435?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-internamiento {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-papanicolaou {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-espirometria {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-laboratorio {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-endoscopia {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-cirugia,
+    .service-cirugia-general {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.3), rgba(18, 60, 114, 0.1)), url('https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-cirugia-ortopedica {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-deteccion-ca-uterino {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-electrocardiografia {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=1200&q=80');
+    }
+    .service-consulta {
+      background-image: linear-gradient(135deg, rgba(18, 60, 114, 0.25), rgba(18, 60, 114, 0.08)), url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=1200&q=80');
+    }
     .hero-badge {
       position: absolute;
       right: -16px;
